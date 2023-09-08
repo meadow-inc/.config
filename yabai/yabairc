@@ -1,0 +1,53 @@
+# bsp, stack, float
+yabai -m config layout bsp
+
+yabai -m config window_placement second_child
+
+#padding
+yabai -m config top_padding 5
+yabai -m config bottom_padding 5
+yabai -m config left_padding 5
+yabai -m config right_padding 5
+yabai -m config window_gap 5
+
+
+# mouse settings
+yabai -m config mouse_follows_focus on
+
+yabai -m config mouse_modifier alt
+#left click + drag
+yabai -m config mouse_action1 move
+#right click + drag
+yabai -m config mouse_action2 resize
+#hover with mouse to change focus
+yabai -m config focus_follows_mouse autofocus
+
+
+#Disable specific apps
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+
+#Map apps to Desktops
+#yabai -m rule --add app="^Spotify$" space=9
+#yabai -m rule --add app="^WhatsApp$" space=8
+#yabai -m rule --add app="^Discord$" space=7
+#yabai -m rule --add app="^Google Chrome$" space=2
+#yabai -m rule --add app="^Safari$" space=3
+#yabai -m rule --add app="^Alacritty$" space=1
+#yabai -m rule --add app="^Finder$" space=4
+
+
+#Application rules
+#yabai -m rule --add app="^Spotify$" space=7
+
+#Desktop rules
+#yabai -m space 7 --display 2
+#yabai -m space 8 --display 1
+#yabai -m space 9 --display 3
+
+# Move spaces to their respective displays by UUID
+#~/.config/yabai/move_space_to_display_by_uuid.sh 1 B4EB5202-F7EF-4CDF-B647-F94E6C51E567
+#~/.config/yabai/move_space_to_display_by_uuid.sh 8 EA393EC2-EE68-4813-959D-589F468FE78D
+#~/.config/yabai/move_space_to_display_by_uuid.sh 2 33332E2A-4B7A-4E19-970F-5D41229D0A27 
+
+
